@@ -1,3 +1,4 @@
+#Swiggy_Web_Subnets
 # Public Subnets 
 resource "aws_subnet" "swiggy-pub-sub-1" {
   vpc_id                  = aws_vpc.swiggy-vpc.id
@@ -20,7 +21,7 @@ resource "aws_subnet" "swiggy-pub-sub-2" {
   }
 }
 
-
+#Swiggy_App_Subnets
 # Private Subnets
 resource "aws_subnet" "swiggy-pvt-sub-1" {
   vpc_id                  = aws_vpc.swiggy-vpc.id
@@ -41,6 +42,7 @@ resource "aws_subnet" "swiggy-pvt-sub-2" {
   }
 }
 
+#Swiggy_DB_Subnets
 resource "aws_subnet" "swiggy-pvt-sub-3" {
   vpc_id                  = aws_vpc.swiggy-vpc.id
   cidr_block              = "10.0.0.64/28"
